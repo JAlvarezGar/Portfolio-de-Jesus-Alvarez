@@ -58,16 +58,15 @@ const ContainerA = styled.div`
     object-fit: contain;
     margin-left: 20px;
   }
-  @media(max-width:800px){
-    #divFotoTypeWriter{
+  @media (max-width: 800px) {
+    #divFotoTypeWriter {
       flex-direction: column;
     }
     .foto {
-      max-width:60px;
+      max-width: 60px;
     }
   }
   @media (max-width: 414px) {
-
     #divFotoTypeWriter {
       padding-top: 10px;
     }
@@ -87,10 +86,12 @@ const ContainerA = styled.div`
 `;
 
 const ContainerB = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   color: #000;
-  width: 100%;
-  div {
+  /* div {
     background-color: #fff;
     color: #000;
     width: 60vw;
@@ -99,6 +100,11 @@ const ContainerB = styled.div`
     -webkit-box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
     -moz-box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
     box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
+  } */
+  .timeLineDiv{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
   }
   h1 {
     margin-left: 50px;
@@ -185,9 +191,9 @@ export const useStyles = makeStyles({
   },
   btCV: {
     padding: "10px",
-       backgroundColor: "tomato",
-      color:"#fff",
-    
+    backgroundColor: "tomato",
+    color: "#fff",
+
     position: "absolute",
     bottom: "20px",
     right: "20px",

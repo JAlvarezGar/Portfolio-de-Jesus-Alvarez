@@ -10,8 +10,6 @@ import { IconButton, ListItem, ListItemIcon } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
 import { Drawer, Divider } from "@material-ui/core";
 
-
-
 const links = [
   {
     id: "about",
@@ -38,7 +36,7 @@ const links = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const classes= useStyles();
+  const classes = useStyles();
   return (
     <>
       <ContainerHeader>
@@ -65,30 +63,39 @@ export function Header() {
           <MenuIcon />
         </IconButton>
       </ContainerHeader>
-      
-        <Drawer class="textIcon" anchor="right" open={open} onClose={() => setOpen(false)}>
-            <CancelIcon onClick={() => setOpen(false)} className={classes.cancelIcon}/>
-          
-          <Divider />
-          {links.map(({ id, text, icon }, index) => (
-            <Link
-              key={index}
-              to={id}
-              spy={true}
-              smooth={true}
-              duration={700}
-              offset={-100}
-            >
-              <ListItem>
-                <div>
-                  <ListItemIcon className={classes.menuIcons}>{icon}</ListItemIcon>
-                </div>
-                <p className={classes.menuLateral}>{text}</p>
-              </ListItem>
-            </Link>
-          ))}
-        </Drawer>
-     
+
+      <Drawer
+        class="textIcon"
+        anchor="right"
+        open={open}
+        onClose={() => setOpen(false)}
+      >
+        <CancelIcon
+          onClick={() => setOpen(false)}
+          className={classes.cancelIcon}
+        />
+
+        <Divider />
+        {links.map(({ id, text, icon }, index) => (
+          <Link
+            key={index}
+            to={id}
+            spy={true}
+            smooth={true}
+            duration={700}
+            offset={-100}
+          >
+            <ListItem>
+              <div>
+                <ListItemIcon className={classes.menuIcons}>
+                  {icon}
+                </ListItemIcon>
+              </div>
+              <p className={classes.menuLateral}>{text}</p>
+            </ListItem>
+          </Link>
+        ))}
+      </Drawer>
     </>
   );
 }
