@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 
 const ContainerA = styled.div`
   display: flex;
@@ -9,37 +10,79 @@ const ContainerA = styled.div`
   color: #fff;
   background: linear-gradient(
     340deg,
-    rgba(34, 195, 169, 1) 0%,
-    rgba(57, 47, 94, 1) 59%
+    rgba(142, 153, 151, 1) 0%,
+    rgba(89, 89, 89, 1) 59%
   );
+
   h1 {
     margin-left: 50px;
   }
   #divFotoTypeWriter {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    min-width: 300px;
-    min-height: 60vh;
+    align-items: start;
+    padding-top: 80px;
+    width: 50vw;
+    max-height: 60vh;
+    position: relative;
     background-color: #fff;
     color: #000;
-    
+    border-radius: 10px;
+    /* border: 1px solid yellow; */
+
     margin: 0 auto;
     height: 70vh;
-    -webkit-box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
-    -moz-box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
-    box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
+    -webkit-box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
+    -moz-box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
+    box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
   }
-  .foto {
-    
-    max-width: 150px;
-    object-fit: contain;
-    margin-left: 20px;
-    margin-top:0;
+  #TwButton {
+    display: flex;
+    flex-direction: column;
+    max-height: 60%;
+    max-width: 90%;
     /* border: 1px solid red; */
   }
-  #typeWriter{
-    max-width: 300px;
+
+  #typeWriter {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 400px;
+    width: 95%;
+    margin-left: 10px;
+    /* border: 1px solid green; */
+  }
+  .foto {
+    max-width: 100px;
+    object-fit: contain;
+    margin-left: 20px;
+  }
+  @media(max-width:800px){
+    #divFotoTypeWriter{
+      flex-direction: column;
+    }
+    .foto {
+      max-width:60px;
+    }
+  }
+  @media (max-width: 414px) {
+
+    #divFotoTypeWriter {
+      padding-top: 10px;
+    }
+
+    .foto {
+      display: none;
+    }
+    #divFotoTypeWriter {
+      width: 95%;
+    }
+    #typeWriter {
+      margin-top: 20px;
+      width: 100%;
+      /* border: 1px solid green; */
+    }
   }
 `;
 
@@ -139,5 +182,18 @@ export const useStyles = makeStyles({
   },
   menuIcons: {
     cursor: "pointer",
+  },
+  btCV: {
+    padding: "10px",
+       backgroundColor: "tomato",
+      color:"#fff",
+    
+    position: "absolute",
+    bottom: "20px",
+    right: "20px",
+    " &:hover": {
+      backgroundColor: "#fff",
+      color: "tomato",
+    },
   },
 });
