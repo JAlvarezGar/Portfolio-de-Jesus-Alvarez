@@ -14,6 +14,18 @@ const ContainerA = styled.div`
     rgba(89, 89, 89, 1) 59%
   );
 
+
+#divCard{
+    display: grid;
+    grid-template-columns: 15.625rem 15.625rem 15.625rem;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    
+
+}
+
+
+
   h1 {
     margin-left: 50px;
   }
@@ -23,12 +35,12 @@ const ContainerA = styled.div`
     align-items: start;
     padding-top: 80px;
     width: 50vw;
-    max-height: 60vh;
+    max-height: 50vh;
     position: relative;
     background-color: #fff;
     color: #000;
     border-radius: 10px;
-    /* border: 1px solid yellow; */
+    /* border: 1px solid red; */
 
     margin: 0 auto;
     height: 70vh;
@@ -58,25 +70,28 @@ const ContainerA = styled.div`
     object-fit: contain;
     margin-left: 20px;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 880px) {
     #divFotoTypeWriter {
       flex-direction: column;
+      max-height: 60vh;
+      width: 60%;
     }
     .foto {
       max-width: 60px;
     }
   }
   @media (max-width: 414px) {
+    width:100%;
     #divFotoTypeWriter {
       padding-top: 10px;
+      max-height: 60vh;
+      width: 100%;
     }
 
     .foto {
       display: none;
     }
-    #divFotoTypeWriter {
-      width: 95%;
-    }
+
     #typeWriter {
       margin-top: 20px;
       width: 100%;
@@ -90,24 +105,21 @@ const ContainerB = styled.div`
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  color: #000;
-  /* div {
-    background-color: #fff;
-    color: #000;
-    width: 60vw;
-    margin: 0 auto;
-    height: 80vh;
-    -webkit-box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
-    -moz-box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
-    box-shadow: -1px 15px 32px 10px rgba(157, 194, 227, 1);
-  } */
-  .timeLineDiv{
+  color: #808080;
+  position: relative;
+  border: 1px solid red;
+
+
+  .timeLineDiv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
   }
   h1 {
+    border: 1px solid green;
     margin-left: 50px;
+    
   }
 `;
 
