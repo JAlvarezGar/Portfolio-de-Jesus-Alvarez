@@ -1,58 +1,127 @@
 import React from "react";
-import { ContainerA, useStyles } from "./styles";
-import redonda from "../images/redonda.png";
+import { ContainerA } from "./styles";
+import foto from "../images/io.jpg";
 import TypeWriter from "react-typewriter-effect";
-import { Button } from "@material-ui/core";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  makeStyles,
+} from "@material-ui/core";
+
 import cv from "../images/046.pdf";
 
 export const AboutMe = (props) => {
   const classes = useStyles();
 
-  if (props.dark == true) {
+  if (props.dark === true) {
     return (
       <ContainerA>
         <h1 id={props.id}>About Me</h1>
-        <div id="divFotoTypeWriter">
-          <img className="foto" src={redonda}></img>
-          {/* <img
-            className="foto"
-            src="https://lh3.googleusercontent.com/pBlvego6NbfJwednwoZaO2ijuTWW_RaxPHV9YmeabFG0_2E-MBJ1mNtrsV27HZrMZbEVtJb_T6rsM1NEAN6hHbaclwBDNRkgKqqtNjGjmGsisv8sXpYrXytEJSQ-mRASmiloGZLy4A=w2400"
-            alt="foto"
-          ></img> */}
-          <div id="TwButton">
-            <div id="typeWriter">
+        <div className={classes.content}>
+          <Card className={classes.card}>
+            <CardMedia
+              image={foto}
+              className={classes.cardMedia}
+              title="picture"
+            />
+            <CardContent className={classes.cardContent}>
               <TypeWriter
                 text="Hola, soy Jesús Álvarez García"
                 textStyle={{
-                  marginRight: "20px",
-                  fontSize: "1.5rem",
+                  fontSize: "1.1rem",
                   color: "tomato",
                 }}
                 startDelay={500}
                 typeSpeed={100}
+                className={classes.typeWriter}
               />
+
               <TypeWriter
                 text="Soy desarrollador junior con conocimientos en la creación de aplicaciones nativas Android, React, HTML5, CSS3, Java y Javascript entre otros..."
                 textStyle={{
                   marginTop: "20px",
-                  marginRight: "20px",
-                  fontSize: "1.2rem",
+                  fontSize: "1rem",
                 }}
                 startDelay={3500}
                 typeSpeed={100}
               />
-            </div>
-          </div>
-          <Button
-            className={classes.btCV}
-            variant="contained"
-            href={cv}
-            download
-          >
-            Download CV en pdf
-          </Button>
+
+              <Button
+                className={classes.btCV}
+                variant="contained"
+                href={cv}
+                download
+              >
+                Download CV en pdf
+              </Button>
+            </CardContent>
+          </Card>
         </div>
+      
       </ContainerA>
     );
   }
 };
+
+const useStyles = makeStyles({
+  content: {
+    minWidth: "80vw",
+    margin: " 0 auto",
+  },
+  card: {
+    display: "flex",
+    height: "60vh",
+    position: "relative",
+    padding: "30px",
+    maxWidth: "70vw",
+  },
+  CardContent: {
+ 
+  },
+  cardMedia: {
+    minWidth: "9.375rem",
+    height: "auto",
+    objectFit: "cover",
+    borderRadius:"5px",
+
+    "@media(max-width: 414px)": {
+      //  display: "none",
+      minWidth: "7rem",
+      height: "400px",
+      
+    },
+    "@media(max-width: 360px)": {
+      //  display: "none",
+      height: "300px",
+      minWidth: "5rem",
+    },
+  },
+  btCV: {
+    bottom: "30px",
+    right: "20px",
+    padding: "10px",
+    color: "tomato",
+    position: "absolute",
+    " &:hover": {
+      backgroundColor: "tomato",
+      color: "#fff",
+    },
+    "@media(max-width: 414px)": {
+    
+      bottom: "20px",
+      position: "absolute",
+      
+    },
+    "@media(max-width: 360px)": {
+     
+     maxWidth: "100px",
+     left: "20px",
+     bottom: "20px",
+     position: "absolute",
+    },
+  },
+  
+  },
+);

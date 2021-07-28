@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ContainerHeader, useStyles } from "./styles";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import MenuIcon from "@material-ui/icons/Menu";
 import CancelIcon from "@material-ui/icons/Cancel";
 import EmojiSymbolsIcon from "@material-ui/icons/EmojiSymbols";
@@ -9,6 +9,7 @@ import PersonPinIcon from "@material-ui/icons/PersonPin";
 import { IconButton, ListItem, ListItemIcon } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
 import { Drawer, Divider } from "@material-ui/core";
+import logo from '../images/mi_logo.png';
 
 const links = [
   {
@@ -42,7 +43,9 @@ export function Header() {
       <ContainerHeader>
         <img
           id="foto"
-          src="https://lh3.googleusercontent.com/ntz9tcC65r_Mh1hO5kcE13JkB0HGAHxaX5t5K7Rf22-JZJOR0dPof-AJsXUK1Oz-VSxkLeR5WQQHIe4BFAnLfzC5ksMz8pt7bEhqarrK9_heAOaRDyZ8Wo7X7hUcNmK_xKBz-vDV1w=w2400"
+          alt="foto"
+          // src="https://lh3.googleusercontent.com/ntz9tcC65r_Mh1hO5kcE13JkB0HGAHxaX5t5K7Rf22-JZJOR0dPof-AJsXUK1Oz-VSxkLeR5WQQHIe4BFAnLfzC5ksMz8pt7bEhqarrK9_heAOaRDyZ8Wo7X7hUcNmK_xKBz-vDV1w=w2400"
+          src={logo}
         />
         <ul>
           {links.map(({ id, text }, index) => (

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
 
 const ContainerA = styled.div`
   display: flex;
@@ -44,9 +43,9 @@ const ContainerA = styled.div`
 
     margin: 0 auto;
     height: 70vh;
-    -webkit-box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
+    /* -webkit-box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
     -moz-box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
-    box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1);
+    box-shadow: 6px 13px 14px 0px rgba(163, 157, 163, 1); */
   }
   #TwButton {
     display: flex;
@@ -69,6 +68,7 @@ const ContainerA = styled.div`
     max-width: 100px;
     object-fit: contain;
     margin-left: 20px;
+    border-radius:10px;
   }
   @media (max-width: 880px) {
     #divFotoTypeWriter {
@@ -80,12 +80,12 @@ const ContainerA = styled.div`
       max-width: 60px;
     }
   }
-  @media (max-width: 414px) {
+  @media (max-width: 600px)  {
     width:100%;
     #divFotoTypeWriter {
       padding-top: 10px;
       max-height: 60vh;
-      width: 100%;
+      width: 95%;
     }
 
     .foto {
@@ -93,11 +93,9 @@ const ContainerA = styled.div`
     }
 
     #typeWriter {
-      margin-top: 20px;
-      width: 100%;
-      /* border: 1px solid green; */
     }
   }
+ 
 `;
 
 const ContainerB = styled.div`
@@ -107,7 +105,6 @@ const ContainerB = styled.div`
   min-height: 100vh;
   color: #808080;
   position: relative;
-  border: 1px solid red;
 
 
   .timeLineDiv {
@@ -117,7 +114,6 @@ const ContainerB = styled.div`
     min-height: 100vh;
   }
   h1 {
-    border: 1px solid green;
     margin-left: 50px;
     
   }
