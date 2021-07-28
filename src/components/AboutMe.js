@@ -10,7 +10,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-import cv from "../images/046.pdf";
+import cv from "../images/cv_vacío.pdf";
 
 export const AboutMe = (props) => {
   const classes = useStyles();
