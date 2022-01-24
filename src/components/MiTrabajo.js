@@ -10,6 +10,10 @@ import { ContainerA } from "./styles";
 import { makeStyles } from "@material-ui/core/styles";
 import imagen from "../images/imagenPrueba.jpg";
 import splash from "../images/spaceman_title.jpg";
+import calculadora from "../images/calculadora.png";
+import portfolio from "../images/portfolio.png";
+import spoti from "../images/spoti_login.png";
+import microsoft from "../images/pantalla_microsoft.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -62,38 +66,38 @@ export const MiTrabajo = (props) => {
 const miCards = [
   {
     icon: faGithub,
-    link: "# ",
+    link: "https://github.com/JAlvarezGar/CalculadoraBasicaDroid",
     trim:"CALCULADORA",
-    foto: imagen,
-    comment:"Calculadora básica"
+    foto: calculadora,
+    comment:"Android studio"
   },
   {
     icon: faGithub,
     link: "https://github.com/JAlvarezGar/Spaceman",
     trim:"SPACEMAN",
     foto: splash,
-    comment:"Juego del tipo buscaminas"
+    comment:"Android studio"
   },
   {
     icon: faGithub,
     link: "#",
     trim:"CLON-SPOTIFY",
-    foto: imagen,
-    comment:"Copia del front-end de Spotify"
+    foto: spoti,
+    comment:"React js"
   },
   {
     icon: faGithub,
-    link: "#",
+    link: "https://github.com/JAlvarezGar/Portfolio-de-Jesus-Alvarez",
     trim:"PORTFOLIO",
-    foto: imagen,
-    comment:"Repositorio de este portfolio"
+    foto: portfolio,
+    comment:"React js"
   },
   {
     icon: faGithub,
-    link: "#",
+    link: "https://github.com/JAlvarezGar/practica-clon-web-Picrosoft",
     trim:"CLON-MICROSOFT",
-    foto: imagen,
-    comment:"Recreación de la web de Microsoft"
+    foto: microsoft,
+    comment:"Html5 - css3"
   },
 ];
 

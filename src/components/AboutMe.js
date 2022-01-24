@@ -10,7 +10,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-import cv from "../images/cv_vacío.pdf";
+import cv from "../images/cv_jesus_alvarez.pdf";
 
 export const AboutMe = (props) => {
   const classes = useStyles();
@@ -28,7 +28,7 @@ export const AboutMe = (props) => {
             />
             <CardContent className={classes.cardContent}>
               <TypeWriter
-                text="Hola, soy Jesús Álvarez García"
+                text="Hi, I´ m Jesús Álvarez García"
                 textStyle={{
                   fontSize: "1.1rem",
                   color: "tomato",
@@ -39,7 +39,7 @@ export const AboutMe = (props) => {
               />
 
               <TypeWriter
-                text="Soy desarrollador junior con conocimientos en la creación de aplicaciones nativas Android, React, HTML5, CSS3, Java y Javascript entre otros..."
+                text="I am a junior developer with knowledge in the creation of native applications Android, React, HTML5, CSS3, Java and Javascript between others ..."
                 textStyle={{
                   marginTop: "20px",
                   fontSize: "1rem",
@@ -54,7 +54,7 @@ export const AboutMe = (props) => {
                 href={cv}
                 download
               >
-                Download CV en pdf
+                Download CV in pdf
               </Button>
             </CardContent>
           </Card>
@@ -81,7 +81,7 @@ const useStyles = makeStyles({
  
   },
   cardMedia: {
-    minWidth: "9.375rem",
+    minWidth: "30rem",
     height: "auto",
     objectFit: "cover",
     borderRadius:"5px",

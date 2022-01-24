@@ -47,7 +47,7 @@ export const Skills = (props) => {
                 <Typography variant="h6" component="h1">
                   HTML5 - CSS3
                 </Typography>
-                <Typography component="h1">Diseño web y bases de datos relacionales (SQL, PL-SQL)</Typography>
+                <Typography component="h1">Web design and relational databases (SQL, PL-SQL)</Typography>
               </Paper>
             </TimelineContent>
           </TimelineItem>
@@ -68,7 +68,7 @@ export const Skills = (props) => {
                 <Typography variant="h6" component="h1">
                 Java - C++
                 </Typography>
-                <Typography component="h1">Programaci&oacute;n orientada a objetos</Typography>
+                <Typography component="h1">Object-oriented programming</Typography>
               </Paper>
             </TimelineContent>
           </TimelineItem>
@@ -90,7 +90,7 @@ export const Skills = (props) => {
                 <Typography variant="h6" component="h1">
                   Android
                 </Typography>
-                <Typography component="h1">Desarrollo de aplicaciones nativas con Android studio</Typography>
+                <Typography component="h1">Native application development with Android studio</Typography>
               </Paper>
             </TimelineContent>
           </TimelineItem>
@@ -110,7 +110,7 @@ export const Skills = (props) => {
                 <Typography variant="h6" component="h1">
                   React JS
                 </Typography>
-                <Typography component="h1">Librer&iacute;a React y Javascript</Typography>
+                <Typography component="h1">React library and Javascript </Typography>
               </Paper>
             </TimelineContent>
           </TimelineItem>
